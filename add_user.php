@@ -1,2 +1,2 @@
 <?php
-$verif = array('115229');
+$verif = "anisa12";
