@@ -38,3 +38,21 @@ $result = curl_exec ($ch);
 curl_close($ch);
 return $result;
 }
+function option($ua) {
+$ch = curl_init ();
+curl_setopt ($ch, CURLOPT_URL, "https://399shop-api.ahzhongy.com/api/PlayerVue/Login");
+curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt ($ch, CURLOPT_CUSTOMREQUEST, 'OPTIONS');
+curl_setopt ($ch, CURLOPT_HTTPHEADER, $ua);
+curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt ($ch, CURLOPT_POSTFIELDS, "");
+curl_setopt ($ch, CURLOPT_COOKIEJAR, "cookie.txt");
+curl_setopt ($ch, CURLOPT_COOKIEFILE, "cookie.txt");
+$result = curl_exec ($ch);
+curl_close($ch);
+return $result;
+}
+
+$a1=" \033[1;30m[\033[1;32m•\033[1;30m] \033[0;37m";
+$a2=" \033[1;30m[\033[1;31m•\033[1;30m] \033[0;37m";
